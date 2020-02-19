@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5e4d11a4abc331000c9b46a9"},"name":"user1","phone":"0966123456","online":true}
+{"_id":{"$oid":"5e4d11fdabc331000c9b46c9"},"name":"user2","phone":"0966111111","online":false}
+{"_id":{"$oid":"5e4d120eabc331000c9b46ce"},"name":"user3","phone":"0966333333","online":true}

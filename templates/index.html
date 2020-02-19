@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Pymongo</title>
+  </head>
+  <body>
+    <h2>Welcome Flask Pymongo</h2>
+    <div>
+      <p>{{ message }}</p>
+      {% if online_users %}
+      <ul>
+        {% for user in online_users %}
+        <li>{{user.name}}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>Empty</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
