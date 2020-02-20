@@ -34,7 +34,7 @@ A sample for practice MongoDB in python Flask.
     ```shell
     export FLASK_APP=app.py
     export FLASK_ENV=development
-    flask run
+    python app.py
     ```
 
 3. Resutl
