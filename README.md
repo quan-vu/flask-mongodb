@@ -4,32 +4,55 @@ A sample for practice MongoDB in python Flask.
 
 ## Setup Database
 
-1. Start MongoDB server with docker:
+We use mongodb as a docker container. 
+
+**Step 1. Start MongoDB server with docker:**
 
     ```shell
-    docker run -d -p 27017:27017 --name mongodb mongo
+    cd flask_mongodb
+    docker-compose up
     ```
 
-2. Create MongoDB: **mytest**
+**Step 2. Connect to MongoDB server with mongo shell command:**
 
-3. Import sample data: data/users.json
+    ```shell
+    mongo mongodb://myadmin:mypassword@localhost:27017/mytestdb
+    ```
+
+    Result
 
     ```
-    mytest
-        |_ users
+    MongoDB shell version v4.2.3
+    connecting to: mongodb://localhost:27017/mytestdb?compressors=disabled&gssapiServiceName=mongodb
+    Implicit session: session { "id" : UUID("8174edcb-ff3c-4b26-83f5-1d6bcc1f6b53") }
+    MongoDB server version: 4.2.3   
+    
+    ```
+
+    Create a collection:
+
+    ```shell
+    > db.createCollection('customers');
+    # { "ok" : 1 }
+    ```
+
+    Show list of collections:
+
+    ```shell
+    > show collections;
+    # customers
     ```
 
 ## Run project
 
-1. Create virtualenv:
-
+**Step 1. Create virtualenv:**
     ```shell
     virtualenv -p python3 venv
     source venv/bin/activate
     pip install -r requirements.in
     ```
 
-2. Start project:
+**Step 2. Start project:**
 
     ```shell
     export FLASK_APP=app.py
@@ -37,7 +60,7 @@ A sample for practice MongoDB in python Flask.
     python app.py
     ```
 
-3. Resutl
+3. Result
 
     ```
     * Serving Flask app "app.py" (lazy loading)
